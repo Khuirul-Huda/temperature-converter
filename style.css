@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    
+}
+
+.container {
+ margin: 50px;
+ height: min-content;
+
+}
+
+input {
+  border: 0;
+  background: transparent;
+  outline: 0;
+  font-size: 20px;
+  border-bottom: 2px solid gray;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+input:focus {
+ /* border-image: linear-gradient(to right, #38ef7d, #11998e); */
+  display: block;
+  padding-bottom: 6px;
+  border-image-slice: 1;
+  border-width: 4px;
+  
+ /*test animasi*/
+   --angle: 0deg;
+  border-image: linear-gradient(var(--angle), green, yellow) 1;
+  animation: 10s rotate linear infinite;
+}
+
+p {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+a {
+  color: white;
+}
